@@ -1,0 +1,114 @@
+
+ROM used: 2781 (34%)
+          3095 (38%) including unused fragments
+
+          3 Average locations per line
+          9 Average locations per statement
+
+RAM used: 47 (13%) at main() level
+          72 (20%) worst case
+
+Stack used: 6 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  320   242  78  robot.c
+  326     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h
+  348    67  22  ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
+----- -----
+  994   309 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   1   1             @delay_ms1
+0      8   0   0             @const76
+ Inline        3   587  6.0  lcd_read_byte
+0      6   0   0    59  4.2  lcd_read_nibble
+0     18   1   1   174  3.9  lcd_send_nibble
+0     86   3   3   313  3.4  lcd_send_byte
+0     55   2   2   581  5.9  lcd_init
+0     18   1   4   186  5.5  lcd_gotoxy
+0     37   1   1   272  4.1  lcd_putc
+0     11   0   0    57  1.5  ini_puertos
+0    347  12   4   292  3.0  ini_voltaje
+0      5   0   0             @const120
+0     70   3   3             @PSTRINGC7_93
+0     29   1   2             @ITOF
+0    117   4  13             @MULFF
+ Inline       14             @DIVFF
+0      7   0   0             @const130
+0     78   3   4             @PSTRINGCN7_93
+ Inline        5             @FTOSD
+0     66   2  13             @DIV3232
+0    231   8  13             @PRINTF_L32D_93FPFPF
+1    618  22   2  2768  3.9  ini_robot
+0      1   0   0             @const142
+0      6   0   0             @const143
+0      5   0   0             @const144
+0      1   0   0             @const145
+0      4   0   0             @const146
+0      4   0   0             @const147
+0      2   0   0             @const148
+0    128   5   9             @PRINTF_LD_93
+0      2   0   0             @const152
+0      1   0   0             @const154
+0      1   0   0             @const155
+0      4   0   0             @const156
+0      4   0   0             @const157
+0      2   0   0             @const158
+0      2   0   0             @const160
+0      1   0   0             @const162
+0      5   0   0             @const163
+0      4   0   0             @const164
+0      2   0   0             @const165
+0      2   0   0             @const167
+0      1   0   0             @const169
+0     57   2   1   193  2.1  ini_lcd
+0      7   0   0             @const171
+0      1   0   0             @const172
+0      5   0   0             @const173
+0      5   0   0             @const174
+0      1   0   0             @const175
+0    188   7   1   678  3.3  ini_temperatura
+0      1   0   0             @const177
+0      7   0   0             @const178
+0      5   0   0             @const179
+0      1   0   0             @const180
+0      7   0   0             @const181
+0      4   0   0             @const182
+0      2   0   0             @const183
+0      1   0   0             @const184
+0      1   0   0             @const186
+1    429  15   1  3527  3.9  MAIN
+0      6   0   0             @const189
+0      1   0   0             @const190
+0      9   0   0             @const191
+0      6   0   0             @const192
+0      5   0   0             @const193
+0      4   0   0             @const194
+0      6   0   0             @const195
+0      5   0   0             @const196
+0      3   0   0             @const197
+
+Program metrics:
+    Functions               13
+    Statements              309
+    Comments                229
+    Volume (V)              14161
+    Difficilty (D)          45.8
+    Effort to implement (E) 648020
+    Time to implement (T)   10 hours, 0 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   17
+    Maintainability (MI)    94
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1730  314  
+00800-00FFF  1047  1001  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

@@ -1,0 +1,219 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+008     lcdlat
+008     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     data
+021-024 voltaje
+025-028 temper
+029-02C medicion
+02D-030 batery
+031-034 l1
+035-036 maximo1
+037-038 minimo1
+039-03A media1
+03B-03C maximo2
+03D-03E minimo2
+03F-040 media2
+041-042 S1
+043-044 S2
+045-046 duty
+047     Timer2
+048     Poscaler
+049-04A @PRINTF_LD_93.P1
+049-04C @PRINTF_L32D_93FPFPF.P2
+049     @PSTRINGCN7_93.P3
+049     lcd_init.i
+049-04A @ITOF.P1
+049     ini_voltaje.@SCRATCH1
+049     @PSTRINGC7_93.@SCRATCH1
+049     ini_robot.@SCRATCH1
+049     ini_lcd.@SCRATCH1
+049     ini_temperatura.@SCRATCH1
+049     MAIN.@SCRATCH1
+04A     lcd_init.@SCRATCH1
+04A     ini_voltaje.@SCRATCH2
+04A     @PSTRINGC7_93.@SCRATCH2
+04A     @PSTRINGCN7_93.@SCRATCH1
+04A     ini_robot.@SCRATCH2
+04B     ini_voltaje.@SCRATCH3
+04B     @PSTRINGC7_93.@SCRATCH3
+04B     @PSTRINGCN7_93.@SCRATCH2
+04B     @PRINTF_LD_93.@SCRATCH1
+04C     ini_voltaje.@SCRATCH4
+04C     @PSTRINGCN7_93.@SCRATCH3
+04C     @PRINTF_LD_93.@SCRATCH2
+04D     @PRINTF_L32D_93FPFPF.P1
+04D-050 @DIVFF.P2
+04D     @PRINTF_LD_93.@SCRATCH3
+04E     @PRINTF_L32D_93FPFPF.@SCRATCH1
+04E     @PRINTF_LD_93.@SCRATCH4
+04F     @PRINTF_L32D_93FPFPF.@SCRATCH2
+04F     @PRINTF_LD_93.@SCRATCH5
+050     @PRINTF_L32D_93FPFPF.@SCRATCH3
+050     @PRINTF_LD_93.@SCRATCH6
+051-054 @DIVFF.P1
+051     @PRINTF_L32D_93FPFPF.@SCRATCH4
+051     @PRINTF_LD_93.@SCRATCH7
+052     @PRINTF_L32D_93FPFPF.@SCRATCH5
+053     @PRINTF_L32D_93FPFPF.@SCRATCH6
+054     @PRINTF_L32D_93FPFPF.@SCRATCH7
+055     @DIVFF.@SCRATCH1
+055     @PRINTF_L32D_93FPFPF.@SCRATCH8
+056-059 @FTOSD.P1
+056     lcd_putc.c
+056-059 @MULFF.P1
+056-059 @DIV3232.P2
+056     @DIVFF.@SCRATCH2
+057     @delay_ms1.P1
+057     lcd_gotoxy.x
+057     @DIVFF.@SCRATCH3
+058     lcd_gotoxy.y
+058     @DIVFF.@SCRATCH4
+059     lcd_gotoxy.address
+059     @DIVFF.@SCRATCH5
+05A-05D @MULFF.P1
+05A-05D @DIV3232.P2
+05A     lcd_gotoxy.@SCRATCH1
+05A     @DIVFF.@SCRATCH6
+05A     @FTOSD.@SCRATCH1
+05B     lcd_send_byte.address
+05C     lcd_send_byte.n
+05D     lcd_read_byte.low
+05D     lcd_send_byte.@SCRATCH1
+05E     lcd_read_byte.high
+05E     lcd_send_nibble.n
+05E     @MULFF.@SCRATCH1
+05E     @DIV3232.@SCRATCH1
+05F     lcd_read_byte.@SCRATCH1
+05F     @MULFF.@SCRATCH2
+05F     @DIV3232.@SCRATCH2
+060     @MULFF.@SCRATCH3
+060     @DIV3232.@SCRATCH3
+061     @MULFF.@SCRATCH4
+061     @DIV3232.@SCRATCH4
+062     @MULFF.@SCRATCH5
+062     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0124  @delay_ms1
+0004  LCD_INIT_STRING
+00D1  lcd_read_byte
+00B6  lcd_read_nibble
+00BC  lcd_send_nibble
+00CE  lcd_send_byte
+01B6  lcd_init
+0139  lcd_gotoxy
+014B  lcd_putc
+00AB  ini_puertos
+04EB  ini_voltaje
+000C  @const120
+0170  @PSTRINGC7_93
+0226  @ITOF
+0243  @MULFF
+0545  @DIVFF
+0011  @const130
+049D  @PSTRINGCN7_93
+0321  @FTOSD
+02B8  @DIV3232
+02FA  @PRINTF_L32D_93FPFPF
+0800  ini_robot
+0018  @const142
+0019  @const143
+001F  @const144
+0024  @const145
+0025  @const146
+0029  @const147
+002D  @const148
+0646  @PRINTF_LD_93
+002F  @const152
+0031  @const154
+0032  @const155
+0033  @const156
+0037  @const157
+003B  @const158
+003D  @const160
+003F  @const162
+0040  @const163
+0045  @const164
+0049  @const165
+004B  @const167
+004D  @const169
+01ED  ini_lcd
+004E  @const171
+0055  @const172
+0056  @const173
+005B  @const174
+0060  @const175
+03E1  ini_temperatura
+0061  @const177
+0062  @const178
+0069  @const179
+006E  @const180
+006F  @const181
+0076  @const182
+007A  @const183
+007C  @const184
+007D  @const186
+0A6A  MAIN
+007E  @const189
+0084  @const190
+0085  @const191
+008E  @const192
+0094  @const193
+0099  @const194
+009D  @const195
+00A3  @const196
+00A8  @const197
+0A6A  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Fernando\Documents\ELECTRONICA DIGITAL2\LENGUAJEC\ROBOT\
+
+Project Files:
+    robot.c
+    ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
+
+Units:
+    C:\Users\Fernando\Documents\ELECTRONICA DIGITAL2\LENGUAJEC\ROBOT\robot (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      robot.err
+    Ext Symbols: robot.esym
+    INHX8:       robot.hex
+    Symbols:     robot.sym
+    List:        robot.lst
+    Debug/COFF:  robot.cof
+    Project:     robot.PJT
+    Call Tree:   robot.tre
+    Statistics:  robot.sta

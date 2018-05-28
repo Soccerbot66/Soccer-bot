@@ -1,0 +1,6 @@
+>>> Warning 203 "robot.c" Line 212(1,1): Condition always TRUE
+>>> Warning 202 "robot.c" Line 17(38,40): Variable never used:   l1
+>>> Warning 202 "robot.c" Line 18(55,57): Variable never used:   S1
+>>> Warning 202 "robot.c" Line 18(58,60): Variable never used:   S2
+      Memory usage:   ROM=34%      RAM=13% - 20%
+      0 Errors,  4 Warnings.
